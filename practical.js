@@ -92,36 +92,3 @@ console.log("Course:", singleStudent.course);
 console.log("GPA:", singleStudent.gpa);
 console.log("Graduated:", singleStudent.graduated);
 
-// Task 11: Calculate a Derived Value
-function checkPassStatus(student) {
-    if (student.marks >= 50) {
-        return "Pass";
-    } else {
-        return "Fail";
-    }
-}
-// Testing standard function
-let status1 = checkPassStatus({ name: "George", marks: 55 });
-console.log("George Status:", status1);
-
-// Task 12: Arrow Function Version
-const checkPassStatusArrow = (student) => student.marks >= 50 ? "Pass" : "Fail";
-
-// Testing arrow function with different values
-let status2 = checkPassStatusArrow({ name: "Hannah", marks: 35 });
-console.log("Hannah Status:", status2);
-
-// Task 13: Format Output with Template Literals
-let summary = `Student Summary:
-----------------
-Name: ${singleStudent.name}
-Age: ${singleStudent.age}
-Course: ${singleStudent.course}
-GPA: ${singleStudent.gpa}
-Status: ${singleStudent.graduated ? "Graduated" : "Currently Enrolled"}`;
-
-console.log(summary);
-
-// Task 14: Track a Date
-let admissionDate = new Date("2024-08-16");
-console.log(`Student ${singleStudent.name} was admitted on: ${admissionDate.toDateString()}`);
